@@ -19,3 +19,13 @@ function setRotation(element, rotationRatio) {
 }
 
 setClock()
+
+// Get the current date and time
+const currentDate = new Date();
+const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const day = weekday[currentDate.getDay()];
+const date = currentDate.getDate();
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const month = months[currentDate.getMonth()];
+const year = currentDate.getFullYear();
+document.getElementById("date").innerHTML = day + ", " + date + " " + month + " " + year;
